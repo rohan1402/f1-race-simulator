@@ -1,0 +1,61 @@
+F1 Race Rewind — Training Report
+========================================
+
+Total laps  : 159,858
+Train laps  : 133,496  (2018–2023)
+Val laps    : 26,362   (2024)
+Circuits    : 36
+
+=== Model A: Lap Time Predictor ===
+Train laps : 133,406
+Val laps   : 26,347
+Train time : 714.1s
+MAE        : 1.510s
+RMSE       : 3.254s
+
+MAE by TyreLife bucket:
+TL_bucket
+1-5      2.873
+6-15     1.370
+16-25    0.899
+26-35    0.978
+35+      1.215
+
+MAE by Compound:
+Compound
+HARD      1.219
+MEDIUM    1.439
+SOFT      1.459
+INTER     3.568
+WET       9.097
+
+Top feature importances:
+    Circuit_enc                1523
+    LapNumber                  1264
+    LapsRemaining              1199
+    RollingMean3               1036
+    RollingMean5                926
+    GapToLeader                 740
+    TyreLife                    588
+    TrackStatus                 522
+    Season                      439
+    PitOutLap_int               343
+
+=== Model B: Pit Decision Classifier ===
+Train laps : 133,496
+Val laps   : 26,362
+Train time : 29.2s
+ROC-AUC    : 0.9512
+Avg Prec   : 0.4186
+Mean pred pit prob : 5.80% (actual: 2.99%)
+
+Top feature importances:
+    TotalPitStops                26
+    TyreLife                     25
+    LapsRemaining                22
+    Compound_enc                 17
+    Position                      9
+    GapToLeader                   8
+    TrackStatus                   7
+    Season                        6
+    TyreLife_sq                   0
