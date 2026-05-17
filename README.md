@@ -2,6 +2,7 @@
 
 A what-if F1 race strategy simulator. Pick a historical race, choose a driver, apply a strategy intervention (pit earlier, pit later, or swap compounds), and watch how the race would have unfolded differently — lap by lap on the actual circuit map.
 
+Live Demo: https://f1-race-simulator-adv-programming.streamlit.app/
 ---
 
 ## What Problem Does It Solve?
